@@ -27,7 +27,6 @@ import environ
 env = environ.Env()
 environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
-
 SECRET_KEY = env("SECRET_KEY")
 
 
@@ -44,6 +43,7 @@ THIRD_PARTY_APPS = [
     "rest_framework",
 ]
 CUSTOM_APPS = [
+    "common.apps.CommonConfig",
     "users.apps.UsersConfig",
     "answers.apps.AnswersConfig",
     "problems.apps.ProblemsConfig",
